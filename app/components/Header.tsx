@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { ArrowRight } from 'lucide-react';
@@ -6,6 +8,22 @@ import ContactModal from './ContactModal';
 
 export default function Header() {
     const [showModal, setShowModal] = useState(false);
+
+    const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+        if (window.location.pathname === '/') {
+            e.preventDefault();
+            const element = document.getElementById(targetId);
+            if (element) {
+                const navbarHeight = 80; // approximate navbar height
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - navbarHeight;
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    };
 
     return (
         <Navbar expand="lg" fixed="top" className="glass-nav py-3">
@@ -16,9 +34,9 @@ export default function Header() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto gap-4">
-                        <Nav.Link as={Link} href="/#home" className="nav-link">Home</Nav.Link>
-                        <Nav.Link as={Link} href="/#servicos" className="nav-link">Serviços</Nav.Link>
-                        <Nav.Link as={Link} href="/#clientes" className="nav-link">Nossos clientes</Nav.Link>
+                        <Nav.Link as={Link} href="/#home" className="nav-link" onClick={(e: any) => handleScroll(e, 'home')}>Home</Nav.Link>
+                        <Nav.Link as={Link} href="/#servicos" className="nav-link" onClick={(e: any) => handleScroll(e, 'servicos')}>Serviços</Nav.Link>
+                        <Nav.Link as={Link} href="/#clientes" className="nav-link" onClick={(e: any) => handleScroll(e, 'clientes')}>Nossos clientes</Nav.Link>
                         <Nav.Link as={Link} href="/blog" className="nav-link">Blog</Nav.Link>
                     </Nav>
                     <button

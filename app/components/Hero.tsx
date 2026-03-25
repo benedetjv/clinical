@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { Container, Row, Col } from 'react-bootstrap';
 import { ShieldCheck, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
+
 
 export default function Hero() {
     return (
@@ -27,7 +29,7 @@ export default function Hero() {
                             </h1>
 
                             <p className="fs-5 mb-3 text-blue-main fw-medium">
-                                Marketing ético e estratégico para clínicas de alto padrão.
+                                Marketing ético e estratégico para profissionais de alto padrão.
                             </p>
 
                             <p className="lead text-dark-body mb-5" style={{ maxWidth: '600px', lineHeight: '1.6' }}>
@@ -50,7 +52,15 @@ export default function Hero() {
                             className="position-relative"
                         >
                             <div className="rounded-4 overflow-hidden position-relative shadow-lg" style={{ height: '550px', backgroundColor: 'var(--gray-silver)' }}>
-                                <div className="position-absolute top-0 start-0 w-100 h-100 bg-blue-night opacity-25"></div>
+                                <Image
+                                    src="/ambiente-medico.webp"
+                                    alt="Ambiente Médico de Alto Padrão"
+                                    fill
+                                    style={{ objectFit: 'cover' }}
+                                    sizes="(max-width: 768px) 100vw, 50vw"
+                                    priority
+                                />
+                                <div className="position-absolute top-0 start-0 w-100 h-100 bg-blue-night opacity-25" style={{ zIndex: 1, pointerEvents: 'none' }}></div>
                             </div>
                         </motion.div>
                     </Col>

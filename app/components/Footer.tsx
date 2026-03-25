@@ -37,24 +37,24 @@ export default function Footer() {
                             <li><Link href="/#home" className="text-gray-silver text-decoration-none hover:text-white transition">Home</Link></li>
                             <li><Link href="/#servicos" className="text-gray-silver text-decoration-none hover:text-white transition">Serviços</Link></li>
                             <li><Link href="/#clientes" className="text-gray-silver text-decoration-none hover:text-white transition">Cases / Clientes</Link></li>
-                            <li><Link href="/blog" className="text-gray-silver text-decoration-none hover:text-white transition">Blog Editorial</Link></li>
+                            <li><Link href="/blog" className="text-gray-silver text-decoration-none hover:text-white transition">Blog</Link></li>
                         </ul>
                     </Col>
 
                     <Col sm={6} lg={4}>
-                        <h5 className="font-montserrat text-white mb-4">Serviços Clínicos</h5>
+                        <h5 className="font-montserrat text-white mb-4">Serviços</h5>
                         <ul className="list-unstyled d-flex flex-column gap-3">
                             <li className="text-gray-silver">Criação de sites</li>
-                            <li className="text-gray-silver">Consultoria em SEO Médico</li>
-                            <li className="text-gray-silver">Branding e Design</li>
-                            <li className="text-gray-silver">Marketing no Google Ads</li>
+                            <li className="text-gray-silver">Consultoria Personalizada</li>
+                            <li className="text-gray-silver">Branding</li>
+                            <li className="text-gray-silver">Manutenção e Suporte</li>
                         </ul>
                     </Col>
                 </Row>
 
                 <div className="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
                     <span className="text-gray-silver small text-center text-md-start">
-                        © {new Date().getFullYear()} Clinical Agência Médica. Todos os direitos reservados.
+                        © {new Date().getFullYear()} Clinical Agência. Todos os direitos reservados.
                     </span>
                     <div className="d-flex gap-3 text-gray-silver small">
                         <span>Adequado ao Manual CFM.</span>

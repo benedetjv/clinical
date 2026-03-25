@@ -16,7 +16,7 @@ const faqs = [
     { q: "A agência segue as normas do CFM?", a: "Absolutamente sim. Todas as nossas campanhas, artes, sites e textos publicitários passam por uma curadoria interna para garantir 100% de conformidade documental, evitando vetos e problemas frente ao Conselho." },
     { q: "Em quanto tempo os resultados começam?", a: "O SEO leva de 3 a 6 meses para maturação. Já as campanhas de pesquisa do Google tendem a apresentar resultados concretos nas primeiras semanas. A constância ditará o topo das buscas na sua região." },
     { q: "Por que escolher a Clinical e não uma agência genérica?", a: "O mercado da saúde necessita de um posicionamento denso e ético. O que funciona pro varejo ou para outros nichos, fere a credibilidade de um médico. Nós só entendemos e respiramos medicina." },
-    { q: "Quais tecnologias vão no site da minha clínica?", a: "Adotamos React, Next.js e Cloud Computing profissional. Isso entrega os sites mais velozes do mercado aos pacientes, aumentando a taxa de conversão em agendas cheias." }
+    { q: "Quais tecnologias vão ser utilizadas no meu site?", a: "Adotamos React, Next.js e Cloud Computing profissional. Isso entrega os sites mais velozes do mercado aos pacientes, aumentando a taxa de conversão em agendas cheias." }
 ];
 
 export default function FAQ() {
