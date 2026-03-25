@@ -33,7 +33,7 @@ export default function Header() {
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="mx-auto gap-4">
+                    <Nav className="mx-auto gap-2 gap-lg-4 my-3 my-lg-0">
                         <Nav.Link as={Link} href="/#home" className="nav-link" onClick={(e: any) => handleScroll(e, 'home')}>Home</Nav.Link>
                         <Nav.Link as={Link} href="/#servicos" className="nav-link" onClick={(e: any) => handleScroll(e, 'servicos')}>Serviços</Nav.Link>
                         <Nav.Link as={Link} href="/#clientes" className="nav-link" onClick={(e: any) => handleScroll(e, 'clientes')}>Nossos clientes</Nav.Link>
@@ -41,7 +41,7 @@ export default function Header() {
                     </Nav>
                     <button
                         onClick={() => setShowModal(true)}
-                        className="glow-button border-0"
+                        className="glow-button border-0 mt-2 mt-lg-0 mb-3 mb-lg-0"
                         style={{ padding: '10px 24px' }}
                     >
                         Entre em contato <ArrowRight size={16} />
